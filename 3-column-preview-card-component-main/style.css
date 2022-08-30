@@ -1,0 +1,142 @@
+:root {
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Verylightgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    width: 750px;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    border: none;
+}
+
+.card h1 {
+    margin-top: 15px;
+    font-size: 35px;
+    color: var(--Verylightgray);
+    font-family: 'Big Shoulders Display', 'cursive';
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card p {
+    margin-top: 15px;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 18px;
+    color: var(--Verylightgray);
+}
+
+.card button {
+    margin-top: 45px;
+    padding: 12px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--Verylightgray);
+    text-transform: capitalize;
+
+}
+
+.btn {
+    color: var(--Brightorange);
+}
+
+.btn-1 {
+    color: var(--Darkcyan);
+}
+
+.btn-2 {
+    color: var(--Verydarkcyan);
+}
+
+
+.card:nth-child(1) {
+    background-color: var(--Brightorange);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.card:nth-child(2) {
+    background-color: var(--Darkcyan);
+}
+
+.card:nth-child(3) {
+    background-color: var(--Verydarkcyan);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+@media screen and (max-width:375px) {
+    .container {
+        height: 100vh;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        margin: 20px;
+    }
+    
+    .card p {
+        width: 90%;
+
+    }
+    
+    .card button {
+        width: 60%;
+        padding: 10px 20px;
+        
+    }
+
+    .card:nth-child(1) {
+        background-color: var(--Brightorange);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 8px;
+    }
+    
+    .card:nth-child(2) {
+        background-color: var(--Darkcyan);
+    }
+    
+    .card:nth-child(3) {
+        background-color: var(--Verydarkcyan);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+}
+
